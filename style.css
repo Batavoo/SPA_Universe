@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --color-heading-text: #8d8d99;
+  --color-heading-text-selected: white;
+  --color-text-h1: #e1e1e6;
+  --color-text-p: #e1e1e6;
+}
