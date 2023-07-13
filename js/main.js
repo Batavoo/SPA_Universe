@@ -34,8 +34,7 @@ exploration.addEventListener("click", () => {
 });
 
 window.addEventListener("popstate", function () {
-  console.log("oi");
-  controls.setData;
+  controls.setData();
 });
 
 router.handle();
