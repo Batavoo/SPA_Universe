@@ -12,17 +12,16 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="/js/main.js" defer></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <img src="./assets/Vector.svg" alt="logo" />
-        <a href="/home">Home</a>
-        <a href="/universe">O Universo</a>
-        <a href="/exploration">Exploração</a>
-      </nav>
-    </header>
-    <main id="app"></main>
+    <nav>
+      <img src="./assets/Vector.svg" alt="logo" />
+      <a id="home" class="selected" href="/" onclick="route()">Home</a>
+      <a id="universe" href="/universe" onclick="route()">O Universo</a>
+      <a id="exploration" href="/exploration" onclick="route()">Exploração</a>
+    </nav>
+
+    <main id="app" class="home"></main>
   </body>
 </html>

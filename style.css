@@ -10,5 +10,115 @@
   --color-heading-text: #8d8d99;
   --color-heading-text-selected: white;
   --color-text-h1: #e1e1e6;
-  --color-text-p: #e1e1e6;
+  --color-text-p: #d3d3d8;
+}
+
+html {
+  background: url(./assets/mountains-universe-1.png) no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body,
+input,
+button {
+  font-family: Roboto;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+nav {
+  padding: 4rem 7.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3.2rem;
+}
+
+nav a {
+  color: var(--color-heading-text);
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+  text-decoration: none;
+}
+
+nav a.selected {
+  color: var(--color-heading-text-selected);
+  font-weight: 700;
+}
+
+main.home {
+  height: 100vh;
+  display: flex;
+  gap: 2.4rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 26rem;
+}
+
+main.home h1 {
+  font-size: 4.8rem;
+}
+
+main.universe {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-top: 6.4rem;
+  margin-left: 10.2rem;
+}
+
+main.exploration {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-top: 6.4rem;
+  margin-left: 10.2rem;
+}
+
+p {
+  color: var(--color-text-p);
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  max-width: 50%;
+}
+
+h1,
+h2 {
+  color: var(--color-text-h1);
+  font-size: 6.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+button {
+  background: transparent;
+  padding: 12px 32px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+
+  color: var(--color-heading-text-selected);
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background: var(--color-heading-text-selected);
+  color: #02799d;
+  cursor: pointer;
 }
