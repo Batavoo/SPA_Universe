@@ -1,5 +1,5 @@
 import { Router } from "./router.js";
-import { home, universe, exploration, htmlElement } from "./elements.js";
+import { home, universe, exploration, app, htmlElement } from "./elements.js";
 import Controls from "./controls.js";
 const router = new Router();
 router.add("/", "/pages/home.html");
@@ -11,33 +11,31 @@ const controls = Controls({
   home,
   universe,
   exploration,
+  htmlElement,
+  app,
 });
 
 home.addEventListener("click", () => {
   if (!home.classList.contains("selected")) {
-    controls.selectLink(home);
-    htmlElement.style.background =
-      "url(./assets/mountains-universe-1.png) no-repeat center center fixed";
-    htmlElement.style.backgroundSize = "cover";
+    controls.setData();
   }
 });
 
 universe.addEventListener("click", () => {
   if (!universe.classList.contains("selected")) {
-    controls.selectLink(universe);
-    htmlElement.style.background =
-      "url(./assets/mountains-universe02.png) no-repeat center center fixed";
-    htmlElement.style.backgroundSize = "cover";
+    controls.setData();
   }
 });
 
 exploration.addEventListener("click", () => {
   if (!exploration.classList.contains("selected")) {
-    controls.selectLink(exploration);
-    htmlElement.style.background =
-      "url(./assets/mountains-universe-3.png) no-repeat center center fixed";
-    htmlElement.style.backgroundSize = "cover";
+    controls.setData();
   }
+});
+
+window.addEventListener("popstate", function () {
+  console.log("oi");
+  controls.setData;
 });
 
 router.handle();
